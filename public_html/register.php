@@ -1,4 +1,5 @@
 <?php
+
 require '../bootloader.php';
 
 $form = new \App\Users\Views\RegisterForm();
@@ -23,6 +24,7 @@ switch (get_form_action()) {
     default:
         $success = false;
 }
+
 ?>
 <html>
     <head>
@@ -30,18 +32,14 @@ switch (get_form_action()) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register</title>
         <link rel="stylesheet" href="media/css/normalize.css">
-        <link rel="stylesheet" href="media/css/milligram.min.css">
         <link rel="stylesheet" href="media/css/style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!--    <script defer src="media/js/app.js"></script>-->
     </head>
     <body>
         <!-- Header -->        
         <header>
             <?php print $navigation->render(); ?>
         </header>
-
         <!-- Main Content -->        
         <main>
             <section class="wrapper">
@@ -53,14 +51,12 @@ switch (get_form_action()) {
                         </p>
                     <?php else: ?>
                         <h1>Register here:</h1>
-
                         <!-- Register Form -->
                         <?php print $form->render(); ?>
                     <?php endif; ?>
                 </div>
             </section>
         </main>
-
         <!-- Footer -->        
         <footer>
             <?php print $footer->render(); ?>

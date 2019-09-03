@@ -25,17 +25,17 @@ if ($feedbacks) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Feedback.php</title>
+        <title>Feedbacks</title>
         <link rel="stylesheet" href="media/css/normalize.css">
-        <link rel="stylesheet" href="media/css/milligram.min.css">
         <link rel="stylesheet" href="media/css/style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
+        <!-- Header -->
         <header>
             <?php print $navigation->render(); ?>
         </header>
-
+        <!-- Main -->
         <main>
             <section class="wrapper">
                 <div class="block">
@@ -54,7 +54,7 @@ if ($feedbacks) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Rows Are Dynamically Populated -->
+                                <!-- If user is not logged in PHP generates feedbacks table data -->
                                 <?php if (!App::$session->userLoggedIn()): ?>
                                     <?php foreach ($feedback_array as $feedbackas): ?>
                                         <tr>
@@ -68,6 +68,7 @@ if ($feedbacks) {
                         </table>
                     </div>                    
                 </div>
+                <!-- If user is logged in PHP allows to write a feedback -->
                 <?php if (App::$session->userLoggedIn()): ?>
                     <div class="block">
                         <h2>Write a feedback about us:</h2>                    
@@ -79,21 +80,19 @@ if ($feedbacks) {
                     </div>
                 <?php endif; ?>
             </section>
-
             <!-- Update Modal -->
             <div id="update-modal" class="modal">
-                <div class="wrapper">
+                <div class="modal-wrapper">
                     <span class="close">&times;</span>
                     <?php print $updateForm->render(); ?>
                 </div>
             </div>            
         </main>
-
         <!-- Footer -->        
         <footer>
             <?php print $footer->render(); ?>
         </footer>
-
+        <!-- Script -->
         <script defer src="media/js/app.js"></script>
     </body>
 </html>

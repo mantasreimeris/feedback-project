@@ -13,7 +13,7 @@ $footer = new \App\Views\Footer();
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Index.php</title>
+        <title>Home</title>
         <link rel="stylesheet" href="media/css/normalize.css">
         <link rel="stylesheet" href="media/css/style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -21,7 +21,7 @@ $footer = new \App\Views\Footer();
     <body>
         <!-- Header -->   
         <header>
-<?php print $navigation->render(); ?>
+            <?php print $navigation->render(); ?>
         </header>
         <!-- Main -->   
         <main>
@@ -57,7 +57,7 @@ $footer = new \App\Views\Footer();
         </main>
         <!-- Footer -->        
         <footer>
-<?php print $footer->render(); ?>
+            <?php print $footer->render(); ?>
         </footer>
         <!-- Script --> 
         <script defer src="media/js/app.js"></script>

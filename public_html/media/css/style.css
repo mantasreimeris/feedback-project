@@ -2,6 +2,20 @@
 
 body {
     background-color: rgba(207, 197, 28, 0.41);
+    font-family: Georgia, serif;
+    color: rgba(68, 68, 68, 0.91);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(207, 197, 28, 0.21);
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgba(207, 197, 28, 0.91);
 }
 
 /* Header starts here */
@@ -9,6 +23,7 @@ body {
 header {
     padding: 20px;
     box-sizing: border-box;
+    background-color: rgba(207, 197, 28, 0.41);
 }
 
 .link-wrapper {
@@ -46,7 +61,7 @@ main {
     text-align: center;
     margin-bottom: 20px;
     border: 1px solid grey;
-    height: 350px;
+    height: 410px;
 }
 
 .service h3 {
@@ -87,6 +102,15 @@ main {
     margin-bottom: 15px;
 }
 
+.block p a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.block p a:hover {
+    border-bottom: 2px solid grey;
+}
+
 /* Form starts here */
 
 form .field-wrapper {
@@ -119,9 +143,10 @@ input {
     width: 100%;
     padding: 5px;
     margin: 5px 0;
-    border: 1px solid silver;
+    border: 1px solid grey;
     border-radius: 5px;
     outline: none;
+    background-color: rgba(207, 197, 28, 0.21);
 }
 
 /* Footer starts here */
@@ -131,6 +156,63 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(207, 197, 28, 0.41);
+}
+
+/* Table starts here */
+
+table {
+    padding: 15px;
+    border: 1px solid grey;
+    width: 100%;
+    text-align: center;
+}
+
+table th,
+table td {
+    padding: 5px;
+}
+
+#person-table table, tr, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+/* Modal starts here */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal .modal-wrapper {
+    background-color: rgba(224,216,111,0.9);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Responsive starts here */
@@ -175,7 +257,9 @@ footer {
     }
 
     nav .link-wrapper.active {
-        border-bottom: 2px solid grey;
+        background-color: rgba(207, 197, 28, 0.91);
+        border: 1px solid grey;
+        border-radius: 5px;
         font-weight: bold;
     }
 
