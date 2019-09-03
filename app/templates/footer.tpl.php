@@ -1,0 +1,1 @@
+<span>&copy; <?php print date('Y') ?> Mantas Reimeris</span>
