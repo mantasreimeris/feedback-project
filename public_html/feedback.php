@@ -20,9 +20,6 @@ if ($feedbacks) {
     }
 }
 
-//if (!App::$session->userLoggedIn()) {
-//    header('Location: /index.php');
-//}
 ?>
 <html>
     <head>

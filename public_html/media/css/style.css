@@ -1,0 +1,200 @@
+/* Body starts here */
+
+body {
+    background-color: rgba(207, 197, 28, 0.41);
+}
+
+/* Header starts here */
+
+header {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.link-wrapper {
+    text-align: center;
+}
+
+.link-wrapper a {
+    text-decoration: none;
+    color: grey;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Main section starts here */
+
+#main-photo {
+    background-image: url(../images/kriste.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 150px;
+}
+
+main {
+    min-height: calc(100vh - 140px);
+}
+
+#container {
+    margin: 20px auto;
+}
+
+.service {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    height: 350px;
+}
+
+.service h3 {
+    margin: 10px 0;
+}
+
+.foto-one {
+    background-image: url("../images/eva.jpg");
+}
+
+.foto-two {
+    background-image: url("../images/leo.jpg");
+}
+
+.foto-three {
+    background-image: url("../images/simma.jpg");
+}
+
+.foto-one,
+.foto-two,
+.foto-three {
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    height: 40%;
+}
+
+.service-text {
+    margin: 0 5px;
+}
+
+#map {
+    height: 300px;
+}
+
+.block {
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+/* Form starts here */
+
+form .field-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+form .field-error, form .error {
+    color: red;
+}
+
+form .message-wrapper {
+    margin-bottom: 2em;
+}
+
+form button {
+    transition: all 0.5s ease;
+}
+
+form.success button {
+    font-size: 0;
+    background: #21006d;
+}
+
+form.success button:after {
+    font-size: 20px;
+    content: '✔';
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid silver;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Footer starts here */
+
+footer {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive starts here */
+
+@media only screen and (min-width: 400px) {
+    
+    .wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+    }
+
+    .nav-flex {
+        width: 100%;
+    }
+
+    .link-wrapper a {
+        margin-bottom: 0;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+
+    .link-wrapper a:hover {
+        text-decoration: underline;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .link-wrapper {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    nav .link-wrapper.active {
+        border-bottom: 2px solid grey;
+        font-weight: bold;
+    }
+
+    #container {
+        min-height: 400px;
+    }
+    
+    .service {
+        max-width: 25%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #main-photo {
+        height: 300px;
+    }
+    
+}

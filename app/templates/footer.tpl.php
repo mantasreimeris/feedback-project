@@ -1,1 +1,1 @@
-<span>&copy; <?php print date('Y') ?> Mantas Reimeris</span>
+<span>&copy; <?php print date('Y') ?> Mantas Reimeris, all rights reserved.</span>
