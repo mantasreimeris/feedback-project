@@ -26,7 +26,7 @@ function exactDay() {
     if (second.toString().length == 1) {
         second = '0' + second;
     }
-    var dateTime = year + '/' + month + '/' + day + ' ' + hour + ':' + minute + ':' + second;
+    var dateTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
     return dateTime;
 }
 
